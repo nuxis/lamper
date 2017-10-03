@@ -6,6 +6,54 @@ import os
 import sys
 
 
+global colors
+# 7 er taket, enkanals
+# 8-9-10 er noen på pila, trekanals
+# 11-12-13-14 er den siste på pila, firekanals
+colors = {
+    'off': {
+        0: 0, # alle andre blir tomme
+    },
+    'red': {
+        7: 20, # rød på enkanals
+
+        8: 20, # rød på enkanals (trekanals bruker samme)
+        9: 255, # styrke på trekanals
+        10: 0, # trekanals. 0 er fint. 255 er fast strobe...
+
+        11: 255, # R # rød på firekanals
+        12: 0, # G
+        13: 0, # B
+        14: 0, # White
+    },
+    'green': {
+        7: 40, # grønn på enkanals
+
+        8: 40, # grønn på enkanals (trekanals bruker samme)
+        9: 255, # styrke på trekanals
+        10: 0, # trekanals. 0 er fint. 255 er fast strobe...
+
+        11: 0, # R
+        12: 255, # G
+        13: 0, # B
+        14: 0, # White
+    },
+    'yellow': {
+        7: 80, # gul på enkanals
+
+        8: 80, # gul på enkanals (trekanals bruker samme)
+        9: 255, # styrke på trekanals
+        10: 0, # trekanals. 0 er fint. 255 er fast strobe...
+
+        11: 255, # R
+        12: 255, # G
+        13: 0, # B
+        14: 0, # White
+    },
+}
+
+
+
 global url
 #url = ''
 url = os.environ['LAMPER_URL']
@@ -63,54 +111,6 @@ def set_dmx(data):
 
 
 if __name__ == '__main__':
-
-    # 7 er taket, enkanals
-    # 8-9-10 er noen på pila, trekanals
-    # 11-12-13-14 er den siste på pila, firekanals
-    colors = {
-        'off': {
-            0: 0, # alle andre blir tomme
-        },
-        'red': {
-            7: 20, # rød på enkanals
-
-            8: 20, # rød på enkanals (trekanals bruker samme)
-            9: 255, # styrke på trekanals
-            10: 0, # trekanals. 0 er fint. 255 er fast strobe...
-
-            11: 255, # R # rød på firekanals
-            12: 0, # G
-            13: 0, # B
-            14: 0, # White
-        },
-        'green': {
-            7: 40, # grønn på enkanals
-
-            8: 40, # grønn på enkanals (trekanals bruker samme)
-            9: 255, # styrke på trekanals
-            10: 0, # trekanals. 0 er fint. 255 er fast strobe...
-
-            11: 0, # R
-            12: 255, # G
-            13: 0, # B
-            14: 0, # White
-        },
-        'yellow': {
-            7: 80, # gul på enkanals
-
-            8: 80, # gul på enkanals (trekanals bruker samme)
-            9: 255, # styrke på trekanals
-            10: 0, # trekanals. 0 er fint. 255 er fast strobe...
-
-            11: 255, # R
-            12: 255, # G
-            13: 0, # B
-            14: 0, # White
-        },
-    }
-
-
-
     if len(sys.argv) != 2:
         print('off, yellow, green or red?')
         sys.exit()
