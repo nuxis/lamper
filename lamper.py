@@ -68,6 +68,9 @@ if __name__ == '__main__':
     # 8-9-10 er noen på pila, trekanals
     # 11-12-13-14 er den siste på pila, firekanals
     colors = {
+        'off': {
+            0: 0, # alle andre blir tomme
+        },
         'red': {
             7: 20, # rød på enkanals
 
@@ -109,11 +112,11 @@ if __name__ == '__main__':
 
 
     if len(sys.argv) != 2:
-        print('yellow, green or red?')
+        print('off, yellow, green or red?')
         sys.exit()
 
     if sys.argv[1] not in colors.keys():
-        print('yellow, green or red?')
+        print('off, yellow, green or red?')
         sys.exit()
     color = sys.argv[1]
 
