@@ -31,4 +31,16 @@ def hello():
 
     lamper.set_dmx(lamper.colors[request.form.get('text')])
 
-    return "Hello World! " + request.form.get('text')
+    #return "Hello World! " + request.form.get('text')
+
+    return """
+    {
+    "response_type": "in_channel",
+    "text": "Light switched to {}",
+    "attachments": [
+        {
+            "text":"Light switched to {}"
+        }
+        ]
+    }
+    """.format(request.form.get('text'))
