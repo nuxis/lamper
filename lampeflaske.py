@@ -11,45 +11,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['POST', 'GET'])
 def hello():
-    if request.form.get('command') != '/lamper':
-        return "wrong command" , status.HTTP_400_BAD_REQUEST
-    r = {
-        'text': '',
-        'attachments': [
-            {
-                'text': 'Velg lampefarge',
-                'fallback': 'Du fikk ikke valgt lampefarge',
-                'callback_id': 'lampefarge',
-                'color': '#121212',
-                'attachment_type': 'default',
-                'actions': [
-                    {
-                        'name': 'green',
-                        'text': 'Grønn',
-                        'type': 'button',
-                        'value': 'green'
-                    },
-                    {
-                        'name': 'yellow',
-                        'text': 'Gul',
-                        'type': 'button',
-                        'value': 'yellow'
-                    },
-                    {
-                        'name': 'red',
-                        'text': 'Rød',
-                        'type': 'button',
-                        'value': 'red'
-                    }
-                ]
-            }
-        ]
-    }
 
-    return jsonify(r)
-
-@app.route("/original/", methods=['POST', 'GET'])
-def original():
     pprint.pprint(request.form)
 
     if request.form.get('command') != '/lamper':
