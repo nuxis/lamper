@@ -15,6 +15,13 @@ colors = {
         0: 0, # alle andre blir tomme
     },
     'red': {
+        1: 100,
+        2: 255,
+        3: 127,
+        4: 51,
+        5: 255,
+        6: 0,
+
         7: 20, # rød på enkanals
 
         8: 20, # rød på enkanals (trekanals bruker samme)
@@ -27,6 +34,13 @@ colors = {
         14: 0, # White
     },
     'green': {
+        1: 100,
+        2: 255,
+        3: 127,
+        4: 51,
+        5: 255,
+        6: 0,
+
         7: 40, # grønn på enkanals
 
         8: 40, # grønn på enkanals (trekanals bruker samme)
@@ -39,6 +53,13 @@ colors = {
         14: 0, # White
     },
     'yellow': {
+        1: 100,
+        2: 255,
+        3: 127,
+        4: 51,
+        5: 255,
+        6: 0,
+
         7: 80, # gul på enkanals
 
         8: 80, # gul på enkanals (trekanals bruker samme)
