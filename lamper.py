@@ -30,9 +30,9 @@ colors = {
 
         7: 20, # rød på enkanals
 
-        8: 20, # rød på enkanals (trekanals bruker samme)
-        9: 255, # styrke på trekanals
-        10: 0, # trekanals. 0 er fint. 255 er fast strobe...
+        8: 255,
+        9: 0,
+        10: 0,
 
         11: 255, # R # rød på firekanals
         12: 0, # G
@@ -49,9 +49,9 @@ colors = {
 
         7: 40, # grønn på enkanals
 
-        8: 40, # grønn på enkanals (trekanals bruker samme)
-        9: 255, # styrke på trekanals
-        10: 0, # trekanals. 0 er fint. 255 er fast strobe...
+        8: 0,
+        9: 255,
+        10: 0,
 
         11: 0, # R
         12: 255, # G
@@ -68,9 +68,9 @@ colors = {
 
         7: 80, # gul på enkanals
 
-        8: 80, # gul på enkanals (trekanals bruker samme)
-        9: 255, # styrke på trekanals
-        10: 0, # trekanals. 0 er fint. 255 er fast strobe...
+        8: 255,
+        9: 255,
+        10: 0,
 
         11: 255, # R
         12: 255, # G
