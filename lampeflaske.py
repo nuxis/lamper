@@ -49,7 +49,7 @@ def hello():
     return jsonify(r)
 
 @app.route("/original/", methods=['POST', 'GET'])
-    def original:
+def original():
     pprint.pprint(request.form)
 
     if request.form.get('command') != '/lamper':
