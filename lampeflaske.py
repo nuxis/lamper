@@ -5,7 +5,7 @@ import pprint
 import os
 import lamper
 
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from flask_api import status
 app = Flask(__name__)
 
@@ -33,14 +33,9 @@ def hello():
 
     #return "Hello World! " + request.form.get('text')
 
-    return """
-    {
-    "response_type": "in_channel",
-    "text": "Light switched to {}",
-    "attachments": [
-        {
-            "text":"Light switched to {}"
-        }
-        ]
+    r = {
+        'response_type': 'in_channel',
+        'text': 'Light switched to {}'.format(request.form.get('text')),
     }
-    """.format(request.form.get('text'))
+
+    return jsonify(r)
