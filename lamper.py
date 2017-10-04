@@ -12,7 +12,13 @@ global colors
 # 11-12-13-14 er den siste på pila, firekanals
 colors = {
     'off': {
-        0: 0, # alle andre blir tomme
+        1: 100,
+        2: 255,
+        3: 127,
+        4: 51,
+        5: 255,
+        6: 0,
+        # alle andre blir tomme (0)
     },
     'red': {
         1: 100,
