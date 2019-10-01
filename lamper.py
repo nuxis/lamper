@@ -149,6 +149,12 @@ def payload_creator(data):
         14: 0,
         15: 0,
         16: 0,
+        17: 0,
+        18: 0,
+        19: 0,
+        20: 0,
+        21: 0,
+        22: 0,
     }
 
     payload = {**empty, **data}
